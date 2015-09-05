@@ -214,7 +214,7 @@
     "afkstatusreset": "\/me [@%%NAME%%] Reset the afk status of @%%USERNAME%%.",
     "inactivefor": "\/me [@%%NAME%%] @%%USERNAME%% has been inactive for %%TIME%%.",
     "inactivelonger": "\/me [@%%NAME%%] @%%USERNAME%% has been inactive longer than %%BOTNAME%%'s been online.",
-    "autowoot": "Please refrain from using autowoot to let us know your real opinion.",
+    "autowoot": "\/me Please consider turning autowoot off to let us know your real opinion.",
     "brandambassador": "\/me A Brand Ambassador is the voice of the plug.dj users. They promote events, engage the community and share the plug.dj message around the world. For more info: https:\/\/plug.dj\/ba",
     "bouncerplusrank": "\/me [@%%NAME%%] You have to be manager or up to enable Bouncer+.",
     "chatcleared": "\/me [@%%NAME%%] Cleared the chat.",
