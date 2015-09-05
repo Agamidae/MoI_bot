@@ -236,7 +236,7 @@
     var botCreatorIDs = ["3851534", "4105209"];
 
     var basicBot = {
-        version: "2.8.14",
+        version: "1.2",
         status: false,
         name: "basicBot",
         loggedInID: null,
@@ -250,7 +250,7 @@
         settings: {
             currentsong: true, //added
             botName: "GLaDOS",
-            language: "MoI",
+            language: "english",
             chatLink: "https://rawgit.com/Agamidae/source/master/lang/en.json",
             scriptLink: "https://rawgit.com/Agamidae/source/master/basicBot.js",
             roomLock: false, // Requires an extension to re-load the script
@@ -294,7 +294,7 @@
             motdEnabled: false,
             motdInterval: 5,
             motd: "Temporary Message of the Day",
-            filterChat: true,
+            filterChat: false,
             etaRestriction: false,
             welcome: true,
             opLink: null,
@@ -304,13 +304,13 @@
             youtubeLink: "http://www.youtube.com/channel/UCAdvw86NPGR6003JhtifAWQ/playlists",
             website: null,
             intervalMessages: [ //added
-                "Like us? Like us! http://facebook.com/moinstrumental", 
+                "Like us? Like us! http://facebook.com/moinstrumental",
+                "Spread the word around: 1. Find friends. 2. Tell them about us. 3. ??? 4. PROFIT",
                 "Want to always catch us online? Follow us at http://twitter.com/moinstrumental",
                 "Feel free to suggest your songs in the chat",
                 "Looking for more soundtracks? Listen to our sister radio: https://plug.dj/filmscores2",
                 "You can find our whole youtube collection at http://bit.ly/MoIyoutube",
-                "Want to chill for a bit? Listen to our sister radio: https://plug.dj/master-of-chillout",
-                "Spread the word around: 1. Find friends. 2. Tell them about us. 3. ??? 4. PROFIT"
+                "Want to chill for a bit? Listen to our sister radio: https://plug.dj/master-of-chillout"
                 ],
             messageInterval: 30,
             songstats: false,
