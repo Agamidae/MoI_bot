@@ -303,9 +303,17 @@
             fbLink: "http://www.facebook.com/moinstrumental",
             youtubeLink: "http://www.youtube.com/channel/UCAdvw86NPGR6003JhtifAWQ/playlists",
             website: null,
-            intervalMessages: [],
-            messageInterval: 5,
-            songstats: true,
+            intervalMessages: [ //added
+                "Like us? Like us! http://facebook.com/moinstrumental", 
+                "Want to always catch us online? Follow us at http://twitter.com/moinstrumental",
+                "Feel free to suggest your songs in the chat",
+                "Looking for more soundtracks? Listen to our sister radio: https://plug.dj/filmscores2",
+                "You can find our whole youtube collection at http://bit.ly/MoIyoutube",
+                "Want to chill for a bit? Listen to our sister radio: https://plug.dj/master-of-chillout",
+                "Spread the word around: 1. Find friends. 2. Tell them about us. 3. ??? 4. PROFIT"
+                ],
+            messageInterval: 30,
+            songstats: false,
             commandLiteral: "!",
             blacklists: {
                 NSFW: "https://rawgit.com/Agamidae/custom/master/blacklists/NSFWlist.json",
@@ -950,10 +958,9 @@
             
             //added
             var dj = API.getDJ().username;
+            var author =  API.getMedia().author;
             var title = API.getMedia().title;
-            if (basicBot.settings.currentsong) {
-                API.sendChat(dj +" ▸ "+ title);
-            }
+            API.sendChat(dj +" ▸ "+ author + " - " + title);
             
             var user = basicBot.userUtilities.lookupUser(obj.dj.id)
             for(var i = 0; i < basicBot.room.users.length; i++){
