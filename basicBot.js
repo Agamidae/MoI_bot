@@ -99,7 +99,7 @@
     var loadChat = function (cb) {
         if (!cb) cb = function () {
         };
-        $.get("https://rawgit.com/bscBot/source/master/lang/langIndex.json", function (json) {
+        $.get("https://rawgit.com/Agamidae/source/master/lang/langIndex.json", function (json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== "undefined") {
                 langIndex = json;
@@ -240,42 +240,42 @@
         status: false,
         name: "basicBot",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/bscBot/source/master/basicBot.js",
+        scriptLink: "https://rawgit.com/Agamidae/source/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://rawgit.com/bscBot/source/master/lang/en.json",
+        chatLink: "https://rawgit.com/Agamidae/source/master/lang/en.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "basicBot",
-            language: "english",
-            chatLink: "https://rawgit.com/bscBot/source/master/lang/en.json",
-            scriptLink: "https://rawgit.com/bscBot/source/master/basicBot.js",
+            botName: "GLaDOS",
+            language: "MoI",
+            chatLink: "https://rawgit.com/Agamidae/source/master/lang/en.json",
+            scriptLink: "https://rawgit.com/Agamidae/source/master/basicBot.js",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
-            startupEmoji: false, // true or false
-            autowoot: true,
-            autoskip: false,
+            startupEmoji: true, // true or false
+            autowoot: false,
+            autoskip: true,
             smartSkip: true,
             cmdDeletion: true,
-            maximumAfk: 120,
-            afkRemoval: true,
+            maximumAfk: null,
+            afkRemoval: false,
             maximumDc: 60,
             bouncerPlus: true,
             blacklistEnabled: true,
             lockdownEnabled: false,
             lockGuard: false,
             maximumLocktime: 10,
-            cycleGuard: true,
+            cycleGuard: false,
             maximumCycletime: 10,
-            voteSkip: false,
-            voteSkipLimit: 10,
-            historySkip: false,
-            timeGuard: true,
+            voteSkip: true,
+            voteSkipLimit: 3,
+            historySkip: true,
+            timeGuard: false,
             maximumSongLength: 10,
-            autodisable: true,
+            autodisable: false,
             commandCooldown: 30,
             usercommandsEnabled: true,
             skipPosition: 3,
@@ -288,7 +288,7 @@
                 ["nsfw", "The song you contained was NSFW (image or sound). "],
                 ["unavailable", "The song you played was not available for some users. "]
             ],
-            afkpositionCheck: 15,
+            afkpositionCheck: 0,
             afkRankCheck: "ambassador",
             motdEnabled: false,
             motdInterval: 5,
@@ -299,17 +299,17 @@
             opLink: null,
             rulesLink: null,
             themeLink: null,
-            fbLink: null,
-            youtubeLink: null,
+            fbLink: "http://www.facebook.com/moinstrumental",
+            youtubeLink: "http://www.youtube.com/channel/UCAdvw86NPGR6003JhtifAWQ/playlists",
             website: null,
             intervalMessages: [],
             messageInterval: 5,
             songstats: true,
             commandLiteral: "!",
             blacklists: {
-                NSFW: "https://rawgit.com/bscBot/custom/master/blacklists/NSFWlist.json",
-                OP: "https://rawgit.com/bscBot/custom/master/blacklists/OPlist.json",
-                BANNED: "https://rawgit.com/bscBot/custom/master/blacklists/BANNEDlist.json"
+                NSFW: "https://rawgit.com/Agamidae/custom/master/blacklists/NSFWlist.json",
+                OP: "https://rawgit.com/Agamidae/custom/master/blacklists/OPlist.json",
+                BANNED: "https://rawgit.com/Agamidae/custom/master/blacklists/BANNEDlist.json"
             }
         },
         room: {
@@ -883,7 +883,8 @@
                     }, 1 * 1000, user)
                     :
                     setTimeout(function (user) {
-                        API.sendChat(subChat(basicBot.chat.welcome, {name: user.username}));
+                    	var welcomeNumber = Math.floor(Math.random() * basicBot.chat.welcomes.length);
+                        API.sendChat(subChat(basicBot.chat.welcomes[welcomeNumber], {name: user.username}));
                     }, 1 * 1000, user);
             }
         },
@@ -2473,7 +2474,7 @@
                         if (msg.length <= cmd.length + 1) return API.sendChat(subChat(basicBot.chat.currentlang, {language: basicBot.settings.language}));
                         var argument = msg.substring(cmd.length + 1);
 
-                        $.get("https://rawgit.com/bscBot/source/master/lang/langIndex.json", function (json) {
+                        $.get("https://rawgit.com/Agamidae/source/master/lang/langIndex.json", function (json) {
                             var langIndex = json;
                             var link = langIndex[argument.toLowerCase()];
                             if (typeof link === "undefined") {
