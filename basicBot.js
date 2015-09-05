@@ -248,6 +248,7 @@
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
+            currentsong: true, //added
             botName: "GLaDOS",
             language: "MoI",
             chatLink: "https://rawgit.com/Agamidae/source/master/lang/en.json",
@@ -882,6 +883,7 @@
                         API.sendChat(subChat(basicBot.chat.welcomeback, {name: user.username}));
                     }, 1 * 1000, user)
                     :
+                    //added
                     setTimeout(function (user) {
                     	var welcomeNumber = Math.floor(Math.random() * basicBot.chat.welcomes.length);
                         API.sendChat(subChat(basicBot.chat.welcomes[welcomeNumber], {name: user.username}));
@@ -945,7 +947,14 @@
             if (basicBot.settings.autowoot) {
                 $("#woot").click(); // autowoot
             }
-
+            
+            //added
+            var dj = API.getDJ().username;
+            var title = API.getMedia().title;
+            if (basicBot.settings.currentsong) {
+                API.sendChat(dj +" ▸ "+ title);
+            }
+            
             var user = basicBot.userUtilities.lookupUser(obj.dj.id)
             for(var i = 0; i < basicBot.room.users.length; i++){
                 if(basicBot.room.users[i].id === user.id){
@@ -956,7 +965,8 @@
                     };
                 }
             }
-
+            
+            
             var lastplay = obj.lastPlay;
             if (typeof lastplay === 'undefined') return;
             if (basicBot.settings.songstats) {
@@ -3660,6 +3670,27 @@
 
                                 API.sendChat(subChat(basicBot.chat.whois, {name1: chat.un, name2: name, id: id, avatar: avatar, profile: profile, language: language, level: level, joined: joined, rank: rank}));
                             }
+                        }
+                    }
+                }
+            },
+            
+            //added
+            currentsongCommand: {
+                command: 'currentsong',
+                rank: 'bouncer',
+                type: 'exact',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        if (basicBot.settings.currentsong) {
+                            basicBot.settings.currentsong = !basicBot.settings.currentsong;
+                            return API.sendChat(subChat(basicBot.chat.toggleoff, {name: chat.un, 'function': "currentsong"}));
+                        }
+                        else {
+                            basicBot.settings.currentsong = !basicBot.settings.currentsong;
+                            return API.sendChat(subChat(basicBot.chat.toggleon, {name: chat.un, 'function': "currentsong"}));
                         }
                     }
                 }
