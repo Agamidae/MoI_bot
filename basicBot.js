@@ -297,12 +297,13 @@
                 "Like us? Like us! http://facebook.com/moinstrumental",
                 "Spread the word around: 1. Find friends. 2. Tell them about us. 3. ??? 4. PROFIT",
                 "Want to always catch us online? Follow us at http://twitter.com/moinstrumental",
-                "Feel free to suggest songs in the chat, we love discovering new music.",
+                "Feel free to suggest songs in the chat, we love discovering new music!",
                 "Looking for more soundtracks? Listen to our sister radio: https://plug.dj/filmscores2",
                 "Install RCS with just two clicks for a better experience. Work mode, hotkeys and more! http://rcs.radiant.dj/",
-                "You can find our whole youtube collection at http://bit.ly/MoIyoutube",
-                "Want to chill out? Listen to our sister radio: https://plug.dj/master-of-chillout"			
-			],
+                "You can find our whole collection at http://bit.ly/MoIyoutube or search for us on soundcloud",
+                "Want to chill out? Listen to our sister radio: https://plug.dj/master-of-chillout",
+                "Your opinion matters! Please consider not using autowoot, so we will know what you really like"
+		],
             filterChat: false,
             etaRestriction: false,
             welcome: true,
@@ -312,8 +313,7 @@
             fbLink: "http://www.facebook.com/moinstrumental",
             youtubeLink: "http://www.youtube.com/channel/UCAdvw86NPGR6003JhtifAWQ/playlists",
             website: null,
-            intervalMessages: [
-                ],
+            intervalMessages: [],
             messageInterval: 0,
             songstats: false,
             commandLiteral: "!",
@@ -2355,8 +2355,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                        var link = "(Updated link coming soon)";
-                        API.sendChat(subChat(basicBot.chat.starterhelp, {link: link}));
+                        API.sendChat(subChat(basicBot.chat.help));
                     }
                 }
             },
