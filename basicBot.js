@@ -309,7 +309,7 @@
                 "Want to always catch us online? Follow us at http://twitter.com/moinstrumental",
                 "Feel free to suggest your songs in the chat",
                 "Looking for more soundtracks? Listen to our sister radio: https://plug.dj/filmscores2",
-                "Install RCS with just two clicks for a better experience. Work mode, hotkeys and more! http://rcs.radiant.dj/"
+                "Install RCS with just two clicks for a better experience. Work mode, hotkeys and more! http://rcs.radiant.dj/",
                 "You can find our whole youtube collection at http://bit.ly/MoIyoutube",
                 "Want to chill out? Listen to our sister radio: https://plug.dj/master-of-chillout"
                 ],
