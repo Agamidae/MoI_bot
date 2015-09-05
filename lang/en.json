@@ -1,10 +1,10 @@
 {
-    "maow": "\/me = ^.˘.^ =  maow!",
+    	"maow": "\/me = ^.˘.^ =  maow!",
 	
 	"help": "\/me This bot is created by Yemasthui, maintained by Benzi and customized by Agamidae. Repository: https://github.com/Agamidae/source",
 	
 	"dances": [
-    "\/me %%NAME%% is doing a moonwalk! On the actual Moon.",
+    	"\/me %%NAME%% is doing a moonwalk! On the actual Moon.",
 	"\/me %%NAME%% is rocking! Hold tight!",
 	"\/me %%NAME%% is moving gracefully like a swan and… now is flying. Judges are in awe.",
 	"\/me Dance, Dance! %%NAME%% is falling apart to half time. Dance, dance!",
