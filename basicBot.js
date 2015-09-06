@@ -963,7 +963,7 @@
             var dj = API.getDJ().username;
             var author =  API.getMedia().author;
             var title = API.getMedia().title;
-            API.sendChat(dj +" ▸ "+ author + " - " + title);
+            API.sendChat("\/me " + dj +" ▸ "+ author + " - " + title);
             
             var user = basicBot.userUtilities.lookupUser(obj.dj.id)
             for(var i = 0; i < basicBot.room.users.length; i++){
