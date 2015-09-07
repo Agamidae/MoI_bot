@@ -1,6 +1,8 @@
 # basicBot (source)
 A bot for Master of * communities:
+
 https://plug.dj/moinstrumental
+
 https://plug.dj/master-of-chillout
 
 This is a fork of BasicBot https://github.com/bscBot/source
