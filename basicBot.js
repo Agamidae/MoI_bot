@@ -292,17 +292,17 @@
             afkpositionCheck: 0,
             afkRankCheck: "ambassador",
             motdEnabled: true,
-            motdInterval: 25,
+            motdInterval: 20,
             motd: [
-                "\/me Like us? Like us! http://facebook.com/moinstrumental",
-                "\/me Spread the word around: 1. Find friends. 2. Tell them about us. 3. ??? 4. PROFIT",
-                "\/me Want to always catch us online? Follow us at http://twitter.com/moinstrumental",
-                "\/me Feel free to suggest songs in the chat, we love discovering new music!",
-                "\/me Looking for more soundtracks? Listen to our sister radio: https://plug.dj/filmscores2",
-                "\/me Install RCS with just two clicks for a better experience. Work mode, hotkeys and more! http://rcs.radiant.dj/",
-                "\/me You can find our whole collection at http://bit.ly/MoIyoutube or search for us on soundcloud",
-                "\/me Want to chill out? Listen to our sister radio: https://plug.dj/master-of-chillout",
-                "\/me Your opinion matters! Please consider not using autowoot, so we will know what you really like"
+                "Like us? Like us! http://facebook.com/moinstrumental",
+                "Spread the word around: 1. Find friends. 2. Tell them about us. 3. ??? 4. PROFIT",
+                "Want to always catch us online? Follow us at http://twitter.com/moinstrumental",
+                "Feel free to suggest songs in the chat, we love discovering new music!",
+                "Looking for more soundtracks? Listen to our sister radio: https://plug.dj/filmscores2",
+                "Install RCS with just two clicks for a better experience. Work mode, hotkeys and more! http://rcs.radiant.dj/",
+                "You can find our whole collection at http://bit.ly/MoIyoutube or search for us on soundcloud",
+                "Want to chill out? Listen to our sister radio: https://plug.dj/master-of-chillout",
+                "Your opinion matters! Please consider not using autowoot, so we will know what you really like"
 		],
             filterChat: false,
             etaRestriction: false,
@@ -1063,7 +1063,7 @@
                 var historySkip = setTimeout(function () {
                     for (var i = 0; i < apihistory.length; i++) {
                         if (apihistory[i].media.cid === obj.media.cid) {
-                            basicBot.room.historyList[i].push(+new Date());
+                            basicBot.room.historyList.push(+new Date());
                             alreadyPlayed = true;
                             API.sendChat(subChat(basicBot.chat.songknown, {name: name}));
                             if (basicBot.settings.smartSkip){
