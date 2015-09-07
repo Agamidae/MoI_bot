@@ -1,4 +1,4 @@
-# basicBot (source)
+# GLaDOS bot
 A bot for Master of * communities:
 
 https://plug.dj/moinstrumental
