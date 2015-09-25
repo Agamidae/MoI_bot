@@ -292,17 +292,12 @@
             afkpositionCheck: 0,
             afkRankCheck: "ambassador",
             motdEnabled: true,
-            motdInterval: 20,
+            motdInterval: 10,
             motd: [
                 "Like us? Like us! http://facebook.com/moinstrumental",
-                "Spread the word around: 1. Find friends. 2. Tell them about us. 3. ??? 4. PROFIT",
-                "Want to always catch us online? Follow us at http://twitter.com/moinstrumental",
-                "Feel free to suggest songs in the chat, we love discovering new music!",
-                "Looking for more soundtracks? Listen to our sister radio: https://plug.dj/filmscores2",
-                "Install RCS with just two clicks for a better experience. Work mode, hotkeys and more! http://rcs.radiant.dj/",
-                "You can find our whole collection at http://bit.ly/MoIyoutube or search for us on soundcloud",
-                "Want to chill out? Listen to our sister radio: https://plug.dj/master-of-chillout",
-                "Your opinion matters! Please consider not using autowoot, so we will know what you really like"
+                "Never lose us again! Follow us at http://twitter.com/moinstrumental",
+                "Back up your playlists! Use http://rene.kooi.me/plugdj-export/ or http://pye.sq10.net/",
+                "If (when) plug goes down, find us at http://bit.ly/moiradionomy"
 		],
             filterChat: false,
             etaRestriction: false,
