@@ -297,7 +297,7 @@
                 "Like us? Like us! http://facebook.com/moinstrumental",
                 "Never lose us again! Follow us at http://twitter.com/moinstrumental",
                 "Back up your playlists! Use http://rene.kooi.me/plugdj-export/ or http://pye.sq10.net/",
-                "If (when) plug goes down, find us at http://bit.ly/moiradionomy"
+                "If (when) plug goes down, find us at http://bit.ly/moiradio"
 		],
             filterChat: false,
             etaRestriction: false,
@@ -767,7 +767,7 @@
                 if ((basicBot.room.roomstats.songCount % interval) === 0 && basicBot.status) {
                     var msg;
                     if (basicBot.settings.motdEnabled) {
-						var msgNumber = Math.floor(Math.random() * basicBot.settings.motd.length);
+			var msgNumber = Math.floor(Math.random() * basicBot.settings.motd.length);
                         msg = basicBot.settings.motd[msgNumber];
                     }
                     else {
@@ -775,7 +775,9 @@
                         var messageNumber = basicBot.room.roomstats.songCount % basicBot.settings.intervalMessages.length;
                         msg = basicBot.settings.intervalMessages[messageNumber];
                     }
-                    API.sendChat('/me ' + msg);
+                    setTimeout(function () {
+                    	API.sendChat('/me ' + msg);
+                    }, 2000);
                 }
             },
             updateBlacklists: function () {
